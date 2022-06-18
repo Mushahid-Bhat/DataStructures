@@ -1,0 +1,35 @@
+// inserting an element in to array
+#include <stdio.h>
+int instfun(int a[],int s,int n,int c,int x){
+if (s>=c){
+    return -1;
+}
+    else{
+    for(int i=s-1;i>=x;i--){
+        a[i+1]=a[i];
+    }
+    a[x]=n;
+    return 1;
+}
+};
+int display(int a[],int s){
+    for (int i=0;i<s;i++){
+        printf("%d\n",a[i]);
+    }
+}
+int main() {
+    int a[10]={3,5,4,7};
+    int n,x,c=10,i,s=4;
+    printf("enter the element to be inserted and corresponding index position");
+    scanf("%d %d",&n,&x);
+    printf("array bedore insertion ");
+     display(a,s);
+      instfun(a,s,n,10,x);
+     s=s+1;
+     printf("array after insertion ");
+      display(a,s);
+     
+    
+    
+    return 0;
+}
