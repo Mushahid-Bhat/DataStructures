@@ -1,0 +1,36 @@
+// binary search
+#include <stdio.h>
+int binsear(int a[],int s,int n){
+    int min=0;
+    int max=s-1;
+while(min<=max){
+     int mid=(min+max)/2;
+    if(a[mid]==n){
+        return mid;
+    }
+    if (a[mid]<n){
+        min=mid+1;
+        
+        
+         }
+    if(a[mid]>n){
+        max=mid-1;
+        
+    }
+    
+}
+return -1;
+}
+
+int main() {
+    int a[11]={1,2,3,4,5,6,7,8,9};
+    int n;
+    int s=sizeof(a)/sizeof(int);
+    printf("enter the number to be searched");
+    scanf("%d",&n);
+     int ans =binsear(a,s,n);
+     printf("%d",ans);
+    
+    
+    return 0;
+}
