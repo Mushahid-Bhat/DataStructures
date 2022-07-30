@@ -1,0 +1,23 @@
+#include <stdio.h>
+int convert(int n){
+    if (n<=0){
+        return 0;
+    }
+    if (n<=1)
+    return 1;
+    else {
+      int y=n%3;
+        convert (n/3);
+      printf("%d",y);
+    }
+}
+int main() {
+    
+int n;
+    printf("enter any decimal no.");
+    scanf("%d",&n);
+   convert(n);
+ 
+
+    return 0;
+}
